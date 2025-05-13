@@ -1,4 +1,3 @@
-# datascience_website
-datascience_website
-TESTING
-TESTING
+# Data Science Portfolio
+
+Document basic DataScience learnings

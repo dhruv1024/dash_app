@@ -7,6 +7,7 @@ import numpy as np
 
 app = dash.Dash(__name__)
 app.title = "Portfolio Optimization"
+server = app.server
 
 app.layout = html.Div([
     html.H1("Portfolio Optimization - Efficient Frontier"),

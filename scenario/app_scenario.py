@@ -8,6 +8,7 @@ import numpy as np
 
 app = dash.Dash(__name__)
 app.title = "Scenario Analysis"
+server = app.server
 
 # Sample data
 scenarios = ["Base", "Optimistic", "Pessimistic"]

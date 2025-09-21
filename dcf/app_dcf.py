@@ -10,6 +10,7 @@ terminal_growth = 0.03
 
 app = dash.Dash(__name__)
 app.title = "DCF Dashboard"
+server = app.server
 
 app.layout = html.Div([
     html.H1("Discounted Cash Flow (DCF) Model"),

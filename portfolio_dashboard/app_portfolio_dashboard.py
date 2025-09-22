@@ -90,10 +90,16 @@ def render_tab(tab):
             html.H2("Scenario & Sensitivity Analysis"),
             html.P("Adjust driver values to see impact on scenario."),
             
-            html.Div([html.Label(driver),
-                      dcc.Slider(id={'type':'driver_slider','index':driver}, min=0, max=20, step=0.5, value=data.loc[driver,"Base"],
-                                 marks={i:str(i) for i in range(0,21,5)}) 
-                     ] for driver in drivers),
+            html.Div([
+                html.Div([
+                    html.Label(driver),
+                    dcc.Slider(
+                        id={'type':'driver_slider','index':driver},
+                        min=0, max=20, step=0.5, value=data.loc[driver,"Base"],
+                        marks={i:str(i) for i in range(0,21,5)}
+                    )
+                ]) for driver in drivers
+            ]),
             
             html.Label("Select Scenario"),
             dcc.Dropdown(id='scenario_dropdown', options=[{"label":s,"value":s} for s in scenarios],
